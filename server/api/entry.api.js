@@ -1,5 +1,6 @@
 const fetch = require('node-fetch');
 const getEntries = () => {
+    config = require('../../env.json')[process.env.NODE_ENV || 'dev'];
     return fetch(`${config.DB_URL}/entry`, {
         method: 'GET',
         headers: {'Content-Type': 'application/json'}
@@ -8,6 +9,7 @@ const getEntries = () => {
 };
 
 const getEntry = (id) => {
+    config = require('../../env.json')[process.env.NODE_ENV || 'dev'];
     return fetch(`${config.DB_URL}/entry/${id}`, {
         method: 'GET',
         headers: {'Content-Type': 'application/json'}

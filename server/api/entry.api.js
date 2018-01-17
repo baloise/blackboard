@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 const getEntries = () => {
-    return fetch('http://localhost:3001/entries', {
+    return fetch(`${config.DB_URL}/entries`, {
         method: 'GET',
         headers: {'Content-Type': 'application/json'}
     }).then(response => response.json())

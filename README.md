@@ -7,7 +7,7 @@ For the client and the server, you need to have node.js (>= 8.4.0) installed.
 - [Node.js](http://nodejs.org) >= 8.4.0
 
 
-### Installing Solar
+### Installing Solr
 
 Get Solr from [Solr](https://lucene.apache.org/solr/mirrors-solr-latest-redir.html) >= 7.2
 

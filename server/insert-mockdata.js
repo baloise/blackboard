@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const baseUrl = 'http://localhost:1234/solr';
+const baseUrl = 'http://localhost:8983/solr';
 const collection = 'Blackboard';
 
 const addMockData = () => {

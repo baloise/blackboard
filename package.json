@@ -9,6 +9,7 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
+    "api": "json-server --watch server/mock/db.json --port 3001",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -24,6 +25,7 @@
     "@angular/router": "5.1.0",
     "core-js": "2.4.1",
     "express": "4.16.2",
+    "json-server": "0.12.1",
     "node-fetch": "1.7.3",
     "rxjs": "5.5.6",
     "zone.js": "0.8.19"

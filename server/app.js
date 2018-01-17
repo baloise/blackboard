@@ -1,8 +1,12 @@
 const express = require('express');
+const api = require('./api');
+
 const app = express();
 const fetch = require('node-fetch');
 const baseUrl = 'http://localhost:8983/solr';
 const collection = 'test';
+
+api.registerEndpoints(app);
 
 const server = app.listen(process.env.PORT || 3000, () => {
     fetch(`${baseUrl}/${collection}/select?q=*:*`)

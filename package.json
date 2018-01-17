@@ -10,6 +10,7 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
+    "insertmock": "node server/insert-mockdata",
     "api": "json-server --watch server/mock/db.json --port 3001",
     "e2e": "ng e2e"
   },

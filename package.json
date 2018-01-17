@@ -5,8 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "server_dev": "set NODE_ENV=dev && node server/app ",
-    "server_prod": "set NODE_ENV=prod && node server/app ",
+    "server_dev": "set NODE_ENV=dev&& node server/app ",
+    "server_prod": "set NODE_ENV=prod&& node server/app ",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",

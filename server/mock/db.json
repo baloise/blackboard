@@ -1,7 +1,28 @@
 {
-  "entries": [
+  "entry": [
     {
-      "name": "test"
+      "id": 1,
+      "title": "Baseballschlaeger",
+      "description": "",
+      "condition": "new"
+    },
+    {
+      "id": 2,
+      "title": "Unicorn",
+      "description": "",
+      "condition": "new"
+    },
+    {
+      "id": 3,
+      "title": "Auto",
+      "description": "",
+      "condition": "new"
+    },
+    {
+      "id": 4,
+      "title": "Kartoffel",
+      "description": "",
+      "condition": "new"
     }
   ]
 }

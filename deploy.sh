@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-cd `dirname $0`
-
 # Extract the package
 mkdir www
 tar -xzf package.tgz

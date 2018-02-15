@@ -5,8 +5,8 @@
   },
   "apps": [
     {
-      "root": "client/src",
-      "outDir": "dist",
+      "root": "client",
+      "outDir": "dist/public",
       "assets": [
         "assets",
         "favicon.ico"
@@ -19,7 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -29,22 +29,21 @@
       }
     }
   ],
-  "e2e": {
-    "protractor": {
-      "config": "./protractor.conf.js"
-    }
-  },
   "lint": [
     {
-      "project": "src/tsconfig.app.json",
+      "project": "client/tsconfig.app.json",
       "exclude": "**/node_modules/**"
     },
     {
-      "project": "src/tsconfig.spec.json",
+      "project": "client/tsconfig.spec.json",
       "exclude": "**/node_modules/**"
     },
     {
-      "project": "e2e/tsconfig.e2e.json",
+      "project": "server/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "server/tsconfig.spec.json",
       "exclude": "**/node_modules/**"
     }
   ],
@@ -54,7 +53,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {}
   }
 }

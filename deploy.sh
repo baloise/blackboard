@@ -1,7 +1,6 @@
 #!/bin/bash
-DIRECTORY=`dirname $0`
-echo ${DIRECTORY}
 cd `dirname $0`
+
 # Extract the package
 mkdir www
 touch donald.txt

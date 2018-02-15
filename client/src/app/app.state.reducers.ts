@@ -1,5 +1,5 @@
-import * as entryOverviewReducer from './entry-overview/redux/entry-overview.reducer'
-import {createSelector} from "@ngrx/store";
+import {createSelector} from '@ngrx/store';
+import * as entryOverviewReducer from './entry-overview/redux/entry-overview.reducer';
 
 export interface BlackboardApplicationState {
     entryOverview: entryOverviewReducer.EntryState;

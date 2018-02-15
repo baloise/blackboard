@@ -1,8 +1,8 @@
-import {Injectable} from "@angular/core";
-import "rxjs/add/operator/map";
-import {Observable} from "rxjs";
-import {Entry} from "../model/entry.model";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import 'rxjs/add/operator/map';
+import {Observable} from 'rxjs/Observable';
+import {Entry} from '../model/entry.model';
 
 @Injectable()
 export class EntryService {

@@ -1,13 +1,13 @@
-import {Entry} from "../../model/entry.model";
-import {EntryActions} from "./entry-overview.actions";
-import * as EntryActionTypes from "./entry-overview.actions";
+import {Entry} from '../../model/entry.model';
+import * as EntryActionTypes from './entry-overview.actions';
+import {EntryActions} from './entry-overview.actions';
 
 export interface EntryState {
-    entries: Entry[]
+    entries: Entry[];
 }
 
 const initialState: EntryState = {
-    entries: [],
+    entries: []
 };
 
 export function reducer(state = initialState, action: EntryActions) {

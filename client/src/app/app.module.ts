@@ -1,15 +1,15 @@
-import {BrowserModule} from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {EffectsModule} from '@ngrx/effects';
+import {StoreModule} from '@ngrx/store';
 
 import {AppComponent} from './app.component';
-import {EntryOverviewPageComponent} from "./entry-overview/entry-overview.page.component";
-import {StoreModule} from '@ngrx/store';
 import {reducers} from './app.state.reducers';
-import {EntryService} from "./entry-overview/entry.service";
-import {EntryOverviewListComponent} from "./entry-overview/entry-overview-list/entry-overview-list.component";
-import {HttpClientModule} from "@angular/common/http";
-import {EffectsModule} from "@ngrx/effects";
-import {EntryOverviewEffects} from "./entry-overview/redux/entry-overview.effetcs";
+import {EntryOverviewListComponent} from './entry-overview/entry-overview-list/entry-overview-list.component';
+import {EntryOverviewPageComponent} from './entry-overview/entry-overview.page.component';
+import {EntryService} from './entry-overview/entry.service';
+import {EntryOverviewEffects} from './entry-overview/redux/entry-overview.effetcs';
 
 @NgModule({
     declarations: [
@@ -21,7 +21,7 @@ import {EntryOverviewEffects} from "./entry-overview/redux/entry-overview.effetc
         BrowserModule,
         HttpClientModule,
         EffectsModule.forRoot([
-           EntryOverviewEffects
+            EntryOverviewEffects
         ]),
         StoreModule.forRoot(reducers),
     ],

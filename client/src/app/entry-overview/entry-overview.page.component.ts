@@ -1,14 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {Entry} from "../model/entry.model";
-import {Observable} from "rxjs/Observable";
-import {Store} from "@ngrx/store";
-import {LoadEntriesAction} from "./redux/entry-overview.actions";
-import {BlackboardApplicationState, getEntries} from "../app.state.reducers";
+import {Store} from '@ngrx/store';
+import {Observable} from 'rxjs/Observable';
+import {BlackboardApplicationState, getEntries} from '../app.state.reducers';
+import {Entry} from '../model/entry.model';
+import {LoadEntriesAction} from './redux/entry-overview.actions';
 
 @Component({
-  selector: 'entry-overview',
-  templateUrl: './entry-overview.page.component.html',
-  styleUrls: ['././entry-overview.page.component.css']
+    selector: 'bb-entry-overview',
+    templateUrl: './entry-overview.page.component.html'
 })
 export class EntryOverviewPageComponent implements OnInit {
 

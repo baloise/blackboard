@@ -1,11 +1,11 @@
-import {Injectable} from "@angular/core";
-import {Actions, Effect} from "@ngrx/effects";
-import {Observable} from "rxjs";
-import {Action} from "@ngrx/store";
-import {EntryService} from "../entry.service";
-import * as EntryActionTypes from "./entry-overview.actions";
-import {LoadEntriesSuccessAction} from "./entry-overview.actions";
-import "rxjs/add/operator/switchMap";
+import {Injectable} from '@angular/core';
+import {Actions, Effect} from '@ngrx/effects';
+import {Action} from '@ngrx/store';
+import 'rxjs/add/operator/switchMap';
+import {Observable} from 'rxjs/Observable';
+import {EntryService} from '../entry.service';
+import * as EntryActionTypes from './entry-overview.actions';
+import {LoadEntriesSuccessAction} from './entry-overview.actions';
 
 @Injectable()
 export class EntryOverviewEffects {

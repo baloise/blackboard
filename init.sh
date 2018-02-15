@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-ssh $USER:$PASSWORD@PUBLIC_URL
-
+#!/bin/bash
 sudo apt-get update
 
 # Stop apache webserver

@@ -15,9 +15,6 @@ after_success:
     - export SSHPASS=$PASSWORD
     - sshpass -e scp package.tgz $USER@$PUBLIC_URL:/var/www/blackboard
 
-script:
-  - bash init.sh
-
 cache:
   directories:
     - "node_modules"

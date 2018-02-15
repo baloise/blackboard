@@ -13,8 +13,8 @@ after_success:
     - mv * build
     - tar -czf package.tgz build
     - export SSHPASS=$PASSWORD
-    - sshpass -e scp package.tgz $USER@$PUBLIC_URL:$DEPLOY_PATH
-    - sshpass -e ssh $USER@$PUBLIC_URL $DEPLOY_PATH/deploy.sh
+    - sshpass -e scp -o stricthostkeychecking=no package.tgz $USER@$PUBLIC_URL:$DEPLOY_PATH
+    - sshpass -e ssh -o stricthostkeychecking=no $USER@$PUBLIC_URL $DEPLOY_PATH/deploy.sh
 
 cache:
   directories:

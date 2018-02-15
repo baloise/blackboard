@@ -2,6 +2,7 @@
 cd `dirname $0`
 # Extract the package
 mkdir www
+touch donald.txt
 tar -xzf package.tgz
 rm package.tgz
 

@@ -15,6 +15,7 @@ after_success:
     - tar -czf package.tgz server
     - sshpass -e scp -o stricthostkeychecking=no package.tgz $USER@$PUBLIC_URL:$DEPLOY_PATH
     - sshpass -e ssh -o stricthostkeychecking=no $USER@$PUBLIC_URL chmod +x $DEPLOY_PATH/deploy.sh
+    - sshpass -e ssh -o stricthostkeychecking=no $USER@$PUBLIC_URL chmod +x $DEPLOY_PATH/restart.sh
     - sshpass -e ssh -o stricthostkeychecking=no $USER@$PUBLIC_URL $DEPLOY_PATH/deploy.sh
     - sshpass -e ssh -o stricthostkeychecking=no $USER@$PUBLIC_URL $DEPLOY_PATH/restart.sh
 

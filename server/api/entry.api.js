@@ -24,7 +24,7 @@ module.exports = {
                 .then(entries => res.json(entries))
                 .catch((err) => {
                     Logger.error(err);
-                    res.sendStatus(500).send('Fetching entries failed!');
+                    res.sendStatus(500).send('Fetching entry failed!');
                 })
         );
         app.get('/api/entry/:id', (req, res) =>

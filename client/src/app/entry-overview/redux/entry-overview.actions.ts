@@ -1,13 +1,28 @@
 import {Action} from '@ngrx/store';
-import {Entry} from "../../model/entry.model";
 
 export const LOAD_ENTRIES = '[Entry] Load';
+export const LOAD_ENTRIES_SUCCESS = '[Entry] Load Success';
+export const LOAD_ENTRIES_FAIL = '[Entry] Load Fail';
 
 export class LoadEntriesAction implements Action {
-    type = LOAD_ENTRIES;
+    readonly type = LOAD_ENTRIES;
 
-    constructor(public payload: Entry[]) {
+    constructor() {
     }
 }
 
-export type EntryActions = LoadEntriesAction;
+export class LoadEntriesSuccessAction implements Action {
+    readonly type = LOAD_ENTRIES_SUCCESS;
+
+    constructor(public payload: any) {
+    }
+}
+
+export class LoadEntriesFailAction implements Action {
+    readonly type = LOAD_ENTRIES_FAIL;
+
+    constructor(public payload) {
+    }
+}
+
+export type EntryActions = LoadEntriesAction | LoadEntriesSuccessAction | LoadEntriesFailAction;

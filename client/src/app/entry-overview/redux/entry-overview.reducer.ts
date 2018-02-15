@@ -12,7 +12,7 @@ const initialState: EntryState = {
 
 export function reducer(state = initialState, action: EntryActions) {
     switch (action.type) {
-        case EntryActionTypes.LOAD_ENTRIES:
+        case EntryActionTypes.LOAD_ENTRIES_SUCCESS:
             const entries: Entry[] = action.payload;
 
             return Object.assign({}, state, {
@@ -22,3 +22,5 @@ export function reducer(state = initialState, action: EntryActions) {
             return state;
     }
 }
+
+export const getEntries = (state: EntryState) => state.entries;

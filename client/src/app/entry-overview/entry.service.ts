@@ -1,17 +1,16 @@
 import {Injectable} from "@angular/core";
-import {Http, RequestOptions, Headers} from "@angular/http";
 import "rxjs/add/operator/map";
 import {Observable} from "rxjs";
 import {Entry} from "../model/entry.model";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable()
 export class EntryService {
 
-    constructor(private http: Http) {
+    constructor(private http: HttpClient) {
     }
 
     getEntries(): Observable<Entry[]> {
-        return this.http.get('api/entry/')
-            .map(res => res.json());
+        return this.http.get<Entry[]>('api/entry/');
     }
 }

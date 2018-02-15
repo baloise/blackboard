@@ -2,6 +2,29 @@ language: node_js
 node_js:
   - "8"
 
+env:
+    global:
+        - USER=userName
+        - PASSWORD=password
+        - PUBLIC_URL=someUrl
+        - PRIVATE_IP=someUrl
+
+addons:
+    apt:
+        packages:
+            - sshpass
+
+
+after_success:
+    - mkdir build
+    - mv * build
+    - tar -czf package.tgz build
+    - export SSHPASS=$PASSWORD
+    - sshpass -e scp package.tgz $USER@$PUBLIC_URL:/var/www/blackboard
+
+script:
+  - bash init.sh
+
 cache:
   directories:
     - "node_modules"

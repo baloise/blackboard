@@ -13,7 +13,7 @@ after_success:
     - mv * build
     - tar -czf package.tgz build
     - export SSHPASS=$PASSWORD
-    - sshpass -e scp package.tgz $USER@$PUBLIC_URL:/var/www/blackboard
+    - sshpass -e scp package.tgz $USER@$PUBLIC_URL:DEPLOY_PATH
 
 cache:
   directories:

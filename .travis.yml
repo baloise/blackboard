@@ -9,12 +9,12 @@ addons:
 
 
 after_success:
+    - export SSHPASS=$PASSWORD
+    - sshpass -e scp -o stricthostkeychecking=no deploy.sh $USER@$PUBLIC_URL:$DEPLOY_PATH
     - mkdir build
     - mv * build
     - tar -czf package.tgz build
-    - export SSHPASS=$PASSWORD
     - sshpass -e scp -o stricthostkeychecking=no package.tgz $USER@$PUBLIC_URL:$DEPLOY_PATH
-    - sshpass -e scp -o stricthostkeychecking=no deploy.sh $USER@$PUBLIC_URL:$DEPLOY_PATH
     - sshpass -e ssh -o stricthostkeychecking=no $USER@$PUBLIC_URL $DEPLOY_PATH/deploy.sh
 
 cache:

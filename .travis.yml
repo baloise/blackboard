@@ -2,13 +2,6 @@ language: node_js
 node_js:
   - "8"
 
-env:
-    global:
-        - USER=userName
-        - PASSWORD=password
-        - PUBLIC_URL=someUrl
-        - PRIVATE_IP=someUrl
-
 addons:
     apt:
         packages:

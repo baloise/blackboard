@@ -12,7 +12,7 @@ after_success:
     - export SSHPASS=$PASSWORD
     - sshpass -e scp -o stricthostkeychecking=no deploy.sh $USER@$PUBLIC_URL:$DEPLOY_PATH
     - sshpass -e scp -o stricthostkeychecking=no restart.sh $USER@$PUBLIC_URL:$DEPLOY_PATH
-    - tar -czf package.tgz server
+    - tar -czf package.tgz server/ node_modules/ package.json
     - sshpass -e scp -o stricthostkeychecking=no package.tgz $USER@$PUBLIC_URL:$DEPLOY_PATH
     - sshpass -e ssh -o stricthostkeychecking=no $USER@$PUBLIC_URL chmod +x $DEPLOY_PATH/deploy.sh
     - sshpass -e ssh -o stricthostkeychecking=no $USER@$PUBLIC_URL chmod +x $DEPLOY_PATH/restart.sh
